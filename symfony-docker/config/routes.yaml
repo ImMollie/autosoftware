@@ -1,0 +1,21 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+message_create:
+    path: /messages
+    controller: App\Controller\MessageController::create
+    methods: [POST]
+message_read:
+    path: /messages/{uuid}
+    controller: App\Controller\MessageController::read
+    methods: [GET]
+message_get:
+    path: /message
+    controller: App\Controller\MessageController::get
+    methods: [GET]
+message_listMessages:
+    path: /messages
+    controller: App\Controller\MessageController::listMessages
+    methods: [GET]
